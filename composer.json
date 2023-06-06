@@ -1,0 +1,15 @@
+{
+  "name": "utelecomim/crmclient",
+  "type": "library",
+  "description": "CRM Client",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.0",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "UtelecomIM\\CRMClient\\": "src/"
+    }
+  }
+}
