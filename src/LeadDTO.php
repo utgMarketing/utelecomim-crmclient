@@ -5,6 +5,72 @@ namespace UtelecomIM\CRMClient;
 class LeadDTO
 {
     /**
+     * Веб-сайт
+     */
+    const SOURCE_SITE = "site";
+
+    /**
+     * Звонок
+     */
+    const SOURCE_CALL = "call";
+
+    /**
+     * Свой контакт
+     */
+    const SOURCE_YOUR_CONTACT = "your_contact";
+
+    /**
+     * Холодный обзвон
+     */
+    const SOURCE_COLD_CALLING = "cold_calling";
+
+    /**
+     * Отказ - ПЕРЕДУМАЛ
+     */
+    const SOURCE_REJECT = "reject";
+
+
+    /**
+     * Не обработан
+     */
+    const STATUS_NOT_PROCESSED = "not_processed";
+
+    /**
+     * Принят в работу
+     */
+    const STATUS_IN_WORK = "in_work";
+
+    /**
+     * Не удалось связаться
+     */
+    const STATUS_FAILED_TO_CONTACT = "failed_to_contact";
+
+    /**
+     * Не желает разговаривать
+     */
+    const STATUS_UNWILLING_TO_TALK = "unwilling_to_talk";
+
+    /**
+     * Принимает решение
+     */
+    const STATUS_MAKES_A_DECISION = "makes_a_decision";
+
+    /**
+     * Качественный лид
+     */
+    const STATUS_QUALITY_LEAD = "quality_lead";
+
+    /**
+     * Некачественный лид
+     */
+    const STATUS_LOW_QUALITY_LEAD = "low-quality_lead";
+
+    /**
+     * Завершить обработку
+     */
+    const STATUS_FINISH_PROCESSING = "finish_processing";
+
+    /**
      * @var string|null
      */
     public $title;
