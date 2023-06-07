@@ -25,7 +25,8 @@ $httpClient = new Client([
 ]);
 
 $crmClient = new CRMClient($httpClient);
-$crmClient->setCredentials("login", "password", "operator_token");
+$crmClient->setCredentials("login", "password"); // опционально
+$crmClient->setOperatorToken("operator_token");
 
 $leadFieldDTO = new LeadFieldDTO();
 $leadFieldDTO->utm_source = "utm_source";

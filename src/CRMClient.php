@@ -41,13 +41,21 @@ class CRMClient
     /**
      * @param string $login
      * @param string $password
-     * @param string $operatorToken
      * @return $this
      */
-    public function setCredentials(string $login, string $password, string $operatorToken)
+    public function setCredentials(string $login, string $password)
     {
         $this->login = $login;
         $this->password = $password;
+        return $this;
+    }
+
+    /**
+     * @param string $operatorToken
+     * @return $this
+     */
+    public function setOperatorToken(string $operatorToken)
+    {
         $this->operatorToken = $operatorToken;
         return $this;
     }
@@ -80,15 +88,19 @@ class CRMClient
      */
     public function createLead(LeadDTO $leadDTO)
     {
-        $this->auth();
+        $headers = [
+            "Accept"           => "application/json",
+            "X-Operator-Token" => $this->operatorToken,
+        ];
+
+        if ($this->login && $this->password) {
+            $this->auth();
+            $headers["Authorization"] = "Bearer " . $this->bearerToken;
+        }
 
         $response = $this->client->post("crm/lead", [
             RequestOptions::JSON    => $leadDTO,
-            RequestOptions::HEADERS => [
-                "Accept"           => "application/json",
-                "Authorization"    => "Bearer " . $this->bearerToken,
-                "X-Operator-Token" => $this->operatorToken,
-            ]
+            RequestOptions::HEADERS => $headers
         ]);
 
         return [
