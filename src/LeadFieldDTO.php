@@ -5,32 +5,32 @@ namespace UtelecomIM\CRMClient;
 class LeadFieldDTO
 {
     /**
-     * @var string|null
+     * @var string
      */
-    public $ga_id;
+    public $ga_id = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $utm_source;
+    public $utm_source = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $utm_content;
+    public $utm_content = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $utm_medium;
+    public $utm_medium = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $utm_term;
+    public $utm_term = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $utm_campaign;
+    public $utm_campaign = "";
 }

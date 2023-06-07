@@ -71,67 +71,67 @@ class LeadDTO
     const STATUS_FINISH_PROCESSING = "finish_processing";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $title;
+    public $title = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $user_first_name;
+    public $user_first_name = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $user_phone;
+    public $user_phone = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $user_city;
+    public $user_city = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $user_address;
+    public $user_address = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $user_tariff_name;
+    public $user_tariff_name = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $user_street;
+    public $user_street = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $user_home;
+    public $user_home = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $user_flat;
+    public $user_flat = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $comment;
+    public $comment = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $source_name;
+    public $source_name = "";
 
     /**
-     * @var string|null
+     * @var string
      */
-    public $status_name;
+    public $status_name = "";
 
     /**
-     * @var LeadFieldDTO|null
+     * @var LeadFieldDTO
      */
     public $lead_field;
 }
