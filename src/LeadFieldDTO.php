@@ -12,6 +12,11 @@ class LeadFieldDTO
     /**
      * @var string
      */
+    public $gclid = "";
+
+    /**
+     * @var string
+     */
     public $utm_source = "";
 
     /**
