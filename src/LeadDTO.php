@@ -131,6 +131,11 @@ class LeadDTO
     public $status_name = "";
 
     /**
+     * @var ?int
+     */
+    public $trademark_id;
+
+    /**
      * @var LeadFieldDTO
      */
     public $lead_field;
